@@ -11,5 +11,6 @@ job(
     name = "test_all",
     all_revision = True,
     command = "test",
+    github_status = True,
     targets = "//...",
 )
