@@ -2,5 +2,8 @@ load("@io_bazel_rules_go//go:def.bzl", "go_test")
 
 go_test(
     name = "go_default_test",
-    srcs = ["tool_test.go"],
+    srcs = [
+        "tool_test.go",
+        "util_test.go",
+    ],
 )
