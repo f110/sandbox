@@ -13,3 +13,5 @@ func TestTool3(t *testing.T) {}
 func TestTool4(t *testing.T) {}
 
 func TestTool5(t *testing.T) {}
+
+func TestTool6(t *testing.T) {}
