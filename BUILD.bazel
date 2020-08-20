@@ -14,5 +14,5 @@ job(
     github_status = True,
     targets = "//...",
     cpu_limit = "300m",
-    synchronized = True,
+    exclusive = True,
 )
