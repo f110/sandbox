@@ -27,7 +27,7 @@ git_repository(
 
 git_repository(
     name = "dev_f110_mono",
-    commit = "3d8a3044ca109ceb6210c658e98acc17def4304f",
+    commit = "8cca4dfa4e0db86b07751c80a9a169141d980ed4",
     remote = "https://github.com/f110/mono",
 )
 
