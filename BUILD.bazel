@@ -16,3 +16,11 @@ job(
     cpu_limit = "300m",
     exclusive = True,
 )
+
+job(
+    name = "release",
+    command = "build",
+    targets = "//...",
+    type = "release",
+    cpu_limit = "300m",
+)
