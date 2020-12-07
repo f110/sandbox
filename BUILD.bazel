@@ -15,6 +15,7 @@ job(
     targets = "//...",
     cpu_limit = "300m",
     exclusive = True,
+    schedule = "*/10 * * * *"
 )
 
 job(
