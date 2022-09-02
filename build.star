@@ -3,7 +3,12 @@ job(
     all_revision = True,
     command = "test",
     github_status = True,
-    targets = ["//..."],
+    targets = [
+        "//...",
+    ],
+    platforms = [
+        "@io_bazel_rules_go//go/toolchain:linux_amd64",
+    ],
     cpu_limit = "300m",
     exclusive = True,
 )
