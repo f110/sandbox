@@ -1,4 +1,2 @@
 sandbox
 ---
-
-## What's up
