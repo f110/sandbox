@@ -11,6 +11,7 @@ job(
     ],
     cpu_limit = "300m",
     exclusive = True,
+    event = ["push"],
 )
 
 job(
