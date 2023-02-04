@@ -7,3 +7,11 @@ go_test(
         "util_test.go",
     ],
 )
+
+go_test(
+    name = "tool_test",
+    srcs = [
+        "tool_test.go",
+        "util_test.go",
+    ],
+)

@@ -1,0 +1,14 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_binary", "go_library")
+
+go_library(
+    name = "tree_lib",
+    srcs = ["main.go"],
+    importpath = "github.com/f110/sandbox/cmd/tree",
+    visibility = ["//visibility:private"],
+)
+
+go_binary(
+    name = "tree",
+    embed = [":tree_lib"],
+    visibility = ["//visibility:public"],
+)
