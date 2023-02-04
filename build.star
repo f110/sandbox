@@ -17,7 +17,6 @@ job(
 job(
     name = "release",
     command = "run",
-    disable_sandbox = True,
     targets = ["//cmd/tree:tree"],
     platforms = [
         "@io_bazel_rules_go//go/toolchain:linux_amd64",
