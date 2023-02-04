@@ -28,6 +28,6 @@ job(
         secret(mount_path = "/var/github", vault_mount = "globemaster", vault_path = "github-app/heimdallr-release", vault_key = "installationid"),
     ],
     env = {
-        "DIR_PATH": "/var/github"
+        "DIR_PATH": "/var"
     },
 )
