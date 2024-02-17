@@ -1,0 +1,26 @@
+load("@rules_pkg//:pkg.bzl", "pkg_tar")
+load("@rules_oci//oci:defs.bzl", "oci_image", "oci_push")
+
+pkg_tar(
+    name = "bin",
+    files = {
+        "//cmd/tree:linux_amd64": "/usr/local/bin/tree",
+    },
+    mode = "0755",
+)
+
+oci_image(
+    name = "image",
+    base = "@distroless_base",
+    entrypoint = ["/usr/local/bin/tree"],
+    tars = [
+        ":bin",
+    ],
+)
+
+oci_push(
+    name = "push",
+    image = ":image",
+    remote_tags = ["latest"],
+    repository = "registry.f110.dev/tools/sandbox",
+)

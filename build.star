@@ -14,6 +14,20 @@ job(
     event = ["push", "pull_request"],
 )
 
+job(
+    name = "publish",
+    command = "run",
+    targets = ["//container/tree:push"],
+    platforms = [
+        "@io_bazel_rules_go//go/toolchain:linux_amd64",
+    ],
+    secrets = [
+        registry_secret(host = "registry.f110.dev", vault_mount = "secrets", vault_path = "globemaster/registry.f110.dev/sandbox", vault_key = "sandbox"),
+    ],
+    cpu_limit = "2000m",
+    event = ["manual"],
+)
+
 #job(
 #    name = "release",
 #    command = "run",
