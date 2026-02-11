@@ -1,0 +1,12 @@
+jobs: {
+	test_all: {
+		command: "test"
+		targets: ["//..."]
+		platforms: ["@rules_go//go/toolchain:linux_amd64"]
+		all_revision:  true
+		github_status: true
+		exclusive: true
+		cpu_limit:     "2000m"
+		event: ["push", "pull_request"]
+	}
+}
