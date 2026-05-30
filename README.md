@@ -2,5 +2,3 @@ sandbox
 ---
 
 First
-
-Second
